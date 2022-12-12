@@ -12,8 +12,8 @@ At the moment only one media attachment for each post is crossposted, it is part
 
 ## Dependencies
 Mastobdon.py https://github.com/halcy/Mastodon.py  
-tweepy https://github.com/tweepy/tweepy https://www.tweepy.org/  
-BeautidulSoup https://www.crummy.com/software/BeautifulSoup/ 
+[tweepy](https://www.tweepy.org/) https://github.com/tweepy/tweepy   
+[BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) 
 
 Follow their installation instructions.
 
