@@ -7,10 +7,10 @@ Long posts will be auto-splitted and posted as a thread on twitter.
 
 The id of the last post is stored in file lasttoot-tw.txt.  
 
-# Note
+## Note
 At the moment only one media attachment for each post is crossposted, it is part of the first tweet if the post is auto-splitted into multiple tweets.
 
-# Dependencies
+## Dependencies
 Mastobdon.py https://github.com/halcy/Mastodon.py  
 tweepy https://github.com/tweepy/tweepy https://www.tweepy.org/  
 BeautidulSoup https://www.crummy.com/software/BeautifulSoup/ 
