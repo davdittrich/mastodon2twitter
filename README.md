@@ -18,3 +18,7 @@ Mastobdon.py https://github.com/halcy/Mastodon.py
 Follow their installation instructions.
 
 For tweepy you will need to create a file config.py with your twitter api credentials. For Mastodon you will create two files, pytooter_clientcred.secret and pytooter_usercred.secret, with your Maston credentials.
+
+## Conact
+
+Find me on Mastodon at https://fediscience.org/@davdittrich
