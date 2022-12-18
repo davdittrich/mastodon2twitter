@@ -48,13 +48,13 @@ if (tweet.reblog):
     org_sname = tweet.account.acct
 
 
-soup1 = BeautifulSoup(tweet.content, 'html.parser')
+soup1 = BeautifulSoup(tweet.content, 'html5lib')
 for match in soup1.findAll('span'):
     match.unwrap()
 for match in soup1.findAll('a'):
     match.unwrap()
-soup1 = BeautifulSoup(str(soup1), 'html.parser')
-soup1 = soup1.get_text("\n")
+soup1 = BeautifulSoup(str(soup1), 'html5lib')
+soup1 = soup1.get_text("\n\n")
 
 message = str(soup1).replace(" ,", ",").replace("  ", " ")
 if len(org_name) > 1:
@@ -112,7 +112,7 @@ tweet_chunk_length = tweet_length_limit
 tweet_count = math.ceil(tweet_length / tweet_chunk_length)
 
 # chunk the tweet into individual pieces
-tweet_chunks = textwrap.wrap(message,  math.ceil(tweet_chunk_length), break_long_words=False)
+tweet_chunks = textwrap.wrap(message,  math.ceil(tweet_chunk_length), break_long_words=False, replace_whitespace=False )
 
 # iterate over the chunks
 x = 1
