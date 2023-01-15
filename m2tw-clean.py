@@ -105,14 +105,21 @@ elif tweet_length >= 280:
     # You might consider adjusting this down
     # depending on how you want to format the
     # tweet.
-    tweet_length_limit = 273
+
+    if re.search(r'\S\.\S', message):
+      if re.search(r'http', message):
+        tweet_length_limit = 273
+      else:
+        tweet_length_limit = 265
+    else:
+      tweet_length_limit = 273
 
 # determine the number of tweets
 tweet_chunk_length = tweet_length_limit
 tweet_count = math.ceil(tweet_length / tweet_chunk_length)
 
 # chunk the tweet into individual pieces
-tweet_chunks = textwrap.wrap(message,  math.ceil(tweet_chunk_length), break_long_words=False, replace_whitespace=False )
+tweet_chunks = textwrap.wrap(message,  math.ceil(tweet_chunk_length), break_long_words=False,  break_on_hyphens=False, replace_whitespace=False)
 
 # iterate over the chunks
 x = 1
